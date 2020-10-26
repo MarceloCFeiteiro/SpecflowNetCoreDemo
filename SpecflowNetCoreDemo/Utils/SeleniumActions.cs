@@ -72,6 +72,16 @@ namespace SpecflowNetCoreDemo.Utils
            return string.Empty;
         }
 
+        /// <summary>
+        /// Método responsável por validar se um elmento esta sendo exibido
+        /// </summary>
+        /// <param name="referencia"></param>
+        /// <returns>True se o elemento esta sendo exibido. False se o contrário</returns>
+        public bool ElementoEstaVisivel(By referencia)
+        {
+            var elemento = EsperaElementoFicarVisivel(referencia);
+            return elemento.Displayed;
+        }
 
 
         /// <summary>

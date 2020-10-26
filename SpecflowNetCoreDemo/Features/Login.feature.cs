@@ -103,25 +103,34 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 7
- testRunner.Given("Eu subo a aplicacao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+ testRunner.Given("que o usario acessa a pagina \"http://eaapp.somee.com/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
 #line hidden
 #line 8
- testRunner.And("Eu Clico no link login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("clica no elemento \"Login\" do tipo \"ByLinkText\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserName",
-                            "Password"});
+                            "Campo",
+                            "Valor",
+                            "Seletor",
+                            "Tipo"});
                 table1.AddRow(new string[] {
+                            "UserName",
                             "admin",
-                            "password"});
+                            "UserName",
+                            "ById"});
+                table1.AddRow(new string[] {
+                            "Password",
+                            "password",
+                            "Password",
+                            "ById"});
 #line 9
- testRunner.And("Eu entro com os seguintes detalhes", ((string)(null)), table1, "E ");
-#line hidden
-#line 12
- testRunner.And("Eu clico no botao de login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.And("entra com os seguintes campos", ((string)(null)), table1, "E ");
 #line hidden
 #line 13
- testRunner.Then("Eu deveria ver o link Employee details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+ testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line hidden
+#line 14
+ testRunner.Then("valida o elemento \"Employee Details\" do tipo \"ByLinkText\" esta visivel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -136,7 +145,7 @@ this.ScenarioInitialize(scenarioInfo);
                     "smoke"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login na aplicação Demo EA com dado errado", null, tagsOfScenario, argumentsOfScenario);
-#line 16
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -156,26 +165,36 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 17
- testRunner.Given("Eu subo a aplicacao", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
-#line hidden
 #line 18
- testRunner.And("Eu Clico no link login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+ testRunner.Given("que o usario acessa a pagina \"http://eaapp.somee.com/\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Dado ");
+#line hidden
+#line 19
+ testRunner.And("clica no elemento \"Login\" do tipo \"ByLinkText\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "UserName",
-                            "Password"});
+                            "Campo",
+                            "Valor",
+                            "Seletor",
+                            "Tipo"});
                 table2.AddRow(new string[] {
+                            "UserName",
                             "admin",
-                            "passwordm"});
-#line 19
- testRunner.And("Eu entro com os seguintes detalhes", ((string)(null)), table2, "E ");
+                            "UserName",
+                            "ById"});
+                table2.AddRow(new string[] {
+                            "Password",
+                            "passwordm",
+                            "Password",
+                            "ById"});
+#line 20
+ testRunner.And("entra com os seguintes campos", ((string)(null)), table2, "E ");
 #line hidden
-#line 22
- testRunner.And("Eu clico no botao de login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
+#line 24
+ testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
-#line 23
- testRunner.Then("Eu deveria a messagem de erro", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+#line 25
+ testRunner.Then("valida a messagem de erro no elemento \".validation-summary-errors>ul>li\" do tipo " +
+                        "\"ByCssSelector\" com o texto \"Invalid login attempt.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             }
             this.ScenarioCleanup();

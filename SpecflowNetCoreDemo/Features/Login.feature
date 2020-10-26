@@ -4,20 +4,22 @@ Funcionalidade: Login
 
 @smoke
 Cenario: Login na aplicação Demo EA
-	Dado Eu subo a aplicacao
-	E Eu Clico no link login
-	E Eu entro com os seguintes detalhes
-		| UserName | Password |
-		| admin    | password |
-	E Eu clico no botao de login
-	Entao Eu deveria ver o link Employee details
+	Dado que o usario acessa a pagina "http://eaapp.somee.com/"
+	E clica no elemento "Login" do tipo "ByLinkText"
+	E entra com os seguintes campos
+		| Campo    | Valor    | Seletor  | Tipo |
+		| UserName | admin    | UserName | ById |
+		| Password | password | Password | ById |
+	E clica no elemento ".btn-default" do tipo "ByCssSelector"
+	Entao valida o elemento "Employee Details" do tipo "ByLinkText" esta visivel
 
 @smoke
 Cenario: Login na aplicação Demo EA com dado errado
-	Dado Eu subo a aplicacao
-	E Eu Clico no link login
-	E Eu entro com os seguintes detalhes
-		| UserName | Password |
-		| admin    | passwordm |
-	E Eu clico no botao de login
-	Entao Eu deveria a messagem de erro
+	Dado que o usario acessa a pagina "http://eaapp.somee.com/"
+	E clica no elemento "Login" do tipo "ByLinkText"
+	E entra com os seguintes campos
+		| Campo    | Valor     | Seletor  | Tipo |
+		| UserName | admin     | UserName | ById |
+		| Password | passwordm | Password | ById |
+	E clica no elemento ".btn-default" do tipo "ByCssSelector"
+	Entao valida a messagem de erro no elemento ".validation-summary-errors>ul>li" do tipo "ByCssSelector" com o texto "Invalid login attempt."
