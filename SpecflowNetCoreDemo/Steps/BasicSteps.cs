@@ -3,12 +3,7 @@ using OpenQA.Selenium;
 using SpecflowNetCoreDemo.Drivers;
 using SpecflowNetCoreDemo.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using TechTalk.SpecFlow;
-using TechTalk.SpecFlow.Assist.ValueRetrievers;
 
 namespace SpecflowNetCoreDemo.Steps
 {
@@ -17,6 +12,7 @@ namespace SpecflowNetCoreDemo.Steps
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
         private readonly SeleniumActions _seleniumActions;
+
         private readonly ScenarioContext _scenarioContext;
         public readonly WebDriverBuilder _webDriverBuilder;
 
@@ -63,9 +59,8 @@ namespace SpecflowNetCoreDemo.Steps
         public void EntaoValidaAMessagemDeErroNoElementoDoTipoComOTexto(string seletor, string tipoElemento, string mensagem)
         {
             var elemento = ObterElementoBy(seletor, tipoElemento);
-            Assert.That(_seleniumActions.RetornaTexto(elemento,mensagem), Is.EqualTo(mensagem));
+            Assert.That(_seleniumActions.RetornaTexto(elemento, mensagem), Is.EqualTo(mensagem));
         }
-
 
         private By ObterElementoBy(string nomeElemento, string tipoElemento)
         {
@@ -73,18 +68,21 @@ namespace SpecflowNetCoreDemo.Steps
             {
                 case "ById":
                     return By.Id(nomeElemento);
+
                 case "ByLinkText":
                     return By.LinkText(nomeElemento);
+
                 case "ByCssSelector":
                     return By.CssSelector(nomeElemento);
+
                 case "ByName":
                     return By.Name(nomeElemento);
+
                 default:
                     break;
             }
 
             return null;
         }
-
     }
 }

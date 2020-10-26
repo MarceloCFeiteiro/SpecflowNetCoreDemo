@@ -69,7 +69,7 @@ namespace SpecflowNetCoreDemo.Utils
 
             if (textoEstaVisivel)
                 return elementoCarregado.Text;
-           return string.Empty;
+            return string.Empty;
         }
 
         /// <summary>
@@ -82,7 +82,6 @@ namespace SpecflowNetCoreDemo.Utils
             var elemento = EsperaElementoFicarVisivel(referencia);
             return elemento.Displayed;
         }
-
 
         /// <summary>
         /// Método responsável por esperar elemento ficar clicável.
