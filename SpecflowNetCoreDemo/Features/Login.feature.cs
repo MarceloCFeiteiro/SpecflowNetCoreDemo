@@ -109,17 +109,14 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("clica no elemento \"Login\" do tipo \"ByLinkText\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Campo",
                             "Valor",
                             "Seletor",
                             "Tipo"});
                 table1.AddRow(new string[] {
-                            "UserName",
                             "admin",
                             "UserName",
                             "ById"});
                 table1.AddRow(new string[] {
-                            "Password",
                             "password",
                             "Password",
                             "ById"});
@@ -130,7 +127,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 14
- testRunner.Then("valida o elemento \"Employee Details\" do tipo \"ByLinkText\" esta visivel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+ testRunner.Then("valida se o elemento \"Employee Details\" do tipo \"ByLinkText\" esta visivel", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -172,17 +169,14 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("clica no elemento \"Login\" do tipo \"ByLinkText\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Campo",
                             "Valor",
                             "Seletor",
                             "Tipo"});
                 table2.AddRow(new string[] {
-                            "UserName",
                             "admin",
                             "UserName",
                             "ById"});
                 table2.AddRow(new string[] {
-                            "Password",
                             "passwordm",
                             "Password",
                             "ById"});
@@ -193,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 25
- testRunner.Then("valida a messagem no elemento \".validation-summary-errors>ul>li\" do tipo \"ByCssSe" +
+ testRunner.Then("valida a mensagem no elemento \".validation-summary-errors>ul>li\" do tipo \"ByCssSe" +
                         "lector\" com o texto \"Invalid login attempt.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             }

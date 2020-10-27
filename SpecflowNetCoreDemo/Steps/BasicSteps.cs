@@ -46,8 +46,8 @@ namespace SpecflowNetCoreDemo.Steps
             {
                 foreach (var linha in table.Rows)
                 {
-                    var elemento = ObterElementoBy(linha[2], linha[3]);
-                    _seleniumActions.EnviarTexto(elemento, linha[1]);
+                    var elemento = ObterElementoBy(linha[1], linha[2]);
+                    _seleniumActions.EnviarTexto(elemento, linha[0]);
                 }
             }
             catch (Exception)
