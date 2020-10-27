@@ -42,22 +42,31 @@ namespace SpecflowNetCoreDemo.Steps
         [When(@"entra com os seguintes campos")]
         public void QuandoEntraComOsSeguintesCampos(Table table)
         {
-            foreach (var linha in table.Rows)
+            try
             {
-                var elemento = ObterElementoBy(linha[2], linha[3]);
-                _seleniumActions.EnviarTexto(elemento, linha[1]);
+                foreach (var linha in table.Rows)
+                {
+                    var elemento = ObterElementoBy(linha[2], linha[3]);
+                    _seleniumActions.EnviarTexto(elemento, linha[1]);
+                }
             }
+            catch (Exception)
+            {
+
+                throw new FormatException("A tabela esta mal formatada");
+            }
+
         }
 
-        [Then(@"valida o elemento ""(.*)"" do tipo ""(.*)"" esta visivel")]
-        public void EntaoValidaOElementoDoTipoEstaVisivel(string seletor, string tipoElemento)
+        [Then(@"valida se o elemento ""(.*)"" do tipo ""(.*)"" esta visivel")]
+        public void EntaoValidaSeOElementoDoTipoEstaVisivel(string seletor, string tipoElemento)
         {
             var elemento = ObterElementoBy(seletor, tipoElemento);
             Assert.That(_seleniumActions.ElementoEstaVisivel(elemento));
         }
 
-        [Then(@"valida a messagem no elemento ""(.*)"" do tipo ""(.*)"" com o texto ""(.*)""")]
-        public void EntaoValidaAMessagemNoElementoDoTipoComOTexto(string seletor, string tipoElemento, string mensagem)
+        [Then(@"valida a mensagem no elemento ""(.*)"" do tipo ""(.*)"" com o texto ""(.*)""")]
+        public void EntaoValidaAMensagemNoElementoDoTipoComOTexto(string seletor, string tipoElemento, string mensagem)
         {
             var elemento = ObterElementoBy(seletor, tipoElemento);
             Assert.That(_seleniumActions.RetornaTexto(elemento, mensagem), Is.EqualTo(mensagem));
