@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Password",
                             "ById"});
 #line 9
- testRunner.And("entra com os seguintes campos", ((string)(null)), table1, "E ");
+ testRunner.When("entra com os seguintes campos", ((string)(null)), table1, "Quando ");
 #line hidden
 #line 13
  testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
@@ -187,7 +187,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "Password",
                             "ById"});
 #line 20
- testRunner.And("entra com os seguintes campos", ((string)(null)), table2, "E ");
+ testRunner.When("entra com os seguintes campos", ((string)(null)), table2, "Quando ");
 #line hidden
 #line 24
  testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");

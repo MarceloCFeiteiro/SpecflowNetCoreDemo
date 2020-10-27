@@ -6,7 +6,7 @@ Funcionalidade: Login
 Cenario: Login na aplicação Demo EA
 	Dado que o usario acessa a pagina "http://eaapp.somee.com/"
 	E clica no elemento "Login" do tipo "ByLinkText"
-	E entra com os seguintes campos
+	Quando entra com os seguintes campos
 		| Campo    | Valor    | Seletor  | Tipo |
 		| UserName | admin    | UserName | ById |
 		| Password | password | Password | ById |
@@ -17,7 +17,7 @@ Cenario: Login na aplicação Demo EA
 Cenario: Login na aplicação Demo EA com dado errado
 	Dado que o usario acessa a pagina "http://eaapp.somee.com/"
 	E clica no elemento "Login" do tipo "ByLinkText"
-	E entra com os seguintes campos
+	Quando entra com os seguintes campos
 		| Campo    | Valor     | Seletor  | Tipo |
 		| UserName | admin     | UserName | ById |
 		| Password | passwordm | Password | ById |

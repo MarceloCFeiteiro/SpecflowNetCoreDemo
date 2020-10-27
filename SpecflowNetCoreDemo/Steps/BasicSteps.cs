@@ -30,16 +30,17 @@ namespace SpecflowNetCoreDemo.Steps
             _webDriverBuilder.WebDriver.Navigate().GoToUrl(url);
         }
 
-        [Given(@"clica no elemento ""(.*)"" do tipo ""(.*)""")]
-        public void EClicaNoElementoDoTipo(string seletor, string tipoElemento)
+        [Given(@"clica no elemento ""(.*)"" do tipo ""(.*)""")]   
+        [When(@"clica no elemento ""(.*)"" do tipo ""(.*)""")]
+        public void QuandoClicaNoElementoDoTipo(string seletor, string tipoElemento)
         {
             var elemento = ObterElementoBy(seletor, tipoElemento);
 
             _seleniumActions.Clicar(elemento);
         }
-
-        [Given(@"entra com os seguintes campos")]
-        public void EEntraComOsSeguintesCampos(Table table)
+       
+        [When(@"entra com os seguintes campos")]
+        public void QuandoEntraComOsSeguintesCampos(Table table)
         {
             foreach (var linha in table.Rows)
             {
