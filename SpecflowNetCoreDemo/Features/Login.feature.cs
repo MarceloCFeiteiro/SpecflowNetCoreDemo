@@ -193,8 +193,8 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("clica no elemento \".btn-default\" do tipo \"ByCssSelector\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "E ");
 #line hidden
 #line 25
- testRunner.Then("valida a messagem de erro no elemento \".validation-summary-errors>ul>li\" do tipo " +
-                        "\"ByCssSelector\" com o texto \"Invalid login attempt.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+ testRunner.Then("valida a messagem no elemento \".validation-summary-errors>ul>li\" do tipo \"ByCssSe" +
+                        "lector\" com o texto \"Invalid login attempt.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             }
             this.ScenarioCleanup();

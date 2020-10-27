@@ -55,8 +55,8 @@ namespace SpecflowNetCoreDemo.Steps
             Assert.That(_seleniumActions.ElementoEstaVisivel(elemento));
         }
 
-        [Then(@"valida a messagem de erro no elemento ""(.*)"" do tipo ""(.*)"" com o texto ""(.*)""")]
-        public void EntaoValidaAMessagemDeErroNoElementoDoTipoComOTexto(string seletor, string tipoElemento, string mensagem)
+        [Then(@"valida a messagem no elemento ""(.*)"" do tipo ""(.*)"" com o texto ""(.*)""")]
+        public void EntaoValidaAMessagemNoElementoDoTipoComOTexto(string seletor, string tipoElemento, string mensagem)
         {
             var elemento = ObterElementoBy(seletor, tipoElemento);
             Assert.That(_seleniumActions.RetornaTexto(elemento, mensagem), Is.EqualTo(mensagem));

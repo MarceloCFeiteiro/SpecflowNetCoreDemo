@@ -22,4 +22,4 @@ Cenario: Login na aplicação Demo EA com dado errado
 		| UserName | admin     | UserName | ById |
 		| Password | passwordm | Password | ById |
 	E clica no elemento ".btn-default" do tipo "ByCssSelector"
-	Entao valida a messagem de erro no elemento ".validation-summary-errors>ul>li" do tipo "ByCssSelector" com o texto "Invalid login attempt."
+	Entao valida a messagem no elemento ".validation-summary-errors>ul>li" do tipo "ByCssSelector" com o texto "Invalid login attempt."
